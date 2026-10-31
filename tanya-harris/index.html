@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanya Harris | Author, Speaker & Founder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-cream: #faf8f5;
+            --card-white: #ffffff;
+            --gold-accent: #c5a059;
+            --gold-light: #f4ebd0;
+            --text-dark: #1a1a1a;
+            --text-muted: #666666;
+            --border: #e6e2dc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Bar */
+        header {
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Hero Section matching her mockup */
+        .hero-section {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #2c241d, #1a1410);
+            border-radius: 24px;
+            color: #fff;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .hero-content {
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .hero-title span {
+            color: var(--gold-accent);
+            font-style: normal;
+        }
+
+        .hero-sub {
+            color: #d1d5db;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37, #aa820a);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+        }
+
+        .hero-image-side {
+            position: relative;
+            background: #111;
+            min-height: 400px;
+        }
+
+        .hero-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Retailers bar */
+        .retailers-bar {
+            background: var(--card-white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Checkout Section for Credit Cards */
+        .checkout-box {
+            background: var(--card-white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            margin-top: 40px;
+        }
+
+        .checkout-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            background: #faf8f5;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+        }
+
+        .pay-btn {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            letter-spacing: 0.5px;
+        }
+
+        .pay-btn:hover {
+            background: var(--gold-accent);
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-name">Tanya Harris</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#book">Book</a>
+            <a href="#checkout">Checkout</a>
+        </div>
+    </header>
+
+    <!-- Hero matching her mockup -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Can we stop living our lives with questions and start living them with <span>exclamation?</span></h1>
+            <p class="hero-sub">Award-Winning Author, Speaker, Advocate & Founder dedicated to faith, healing, and purpose.</p>
+            <div>
+                <a href="#checkout" class="btn-gold">Get My Book Securely</a>
+            </div>
+        </div>
+        <div class="hero-image-side">
+            <img src="author.png" alt="Tanya Harris" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80'">
+        </div>
+    </div>
+
+    <!-- Retailers Bar -->
+    <div class="retailers-bar">
+        <span>AMAZON</span>
+        <span>BARNES & NOBLE</span>
+        <span>WALMART</span>
+        <span>AUDIBLE</span>
+    </div>
+
+    <div class="container" id="checkout">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 10px;">Secure Credit Card Checkout</h2>
+            <p style="color: var(--text-muted);">Direct, safe processing supporting major credit cards (No debit required).</p>
+        </div>
+
+        <div class="checkout-box">
+            <h3>Order "Journey of the Heart"</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem;">Hardcover Edition + Signed Author Copy • $29.99</p>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" placeholder="Tanya">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" placeholder="Harris">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Credit Card Number (Secure SSL)</label>
+                <input type="text" class="form-control" placeholder="•••• •••• •••• ••••">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Expiration Date</label>
+                    <input type="text" class="form-control" placeholder="MM / YY">
+                </div>
+                <div class="form-group">
+                    <label>CVV Security Code</label>
+                    <input type="text" class="form-control" placeholder="123">
+                </div>
+            </div>
+
+            <button class="pay-btn" onclick="alert('Secure Credit Card Demo Sandbox!')">Complete Secure Payment ($29.99) 💳</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tanya Harris. All Rights Reserved. | Demo Custom-Built by Temiloluwa.</p>
+    </footer>
+
+</body>
+</html>
