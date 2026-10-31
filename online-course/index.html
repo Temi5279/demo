@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Academy | Modern Online Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --liquid-bg: #030712;
+            --glass-card: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-hover: rgba(255, 255, 255, 0.07);
+            --accent-cyan: #06b6d4;
+            --accent-violet: #8b5cf6;
+            --accent-pink: #ec4899;
+            --text-primary: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--liquid-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Ambient Apple Liquid Glow Orbs */
+        .liquid-orb-1 {
+            position: absolute;
+            top: -100px;
+            left: 20%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+            filter: blur(80px);
+            z-index: -1;
+            animation: floatOrb 10s ease-in-out infinite alternate;
+        }
+
+        .liquid-orb-2 {
+            position: absolute;
+            top: 250px;
+            right: 15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
+            filter: blur(90px);
+            z-index: -1;
+            animation: floatOrb 12s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, 40px) scale(1.1); }
+        }
+
+        /* Apple Frosted Glass Header */
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(3, 7, 18, 0.65);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            padding: 16px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.9rem;
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+
+        .cta-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Liquid Hero Section */
+        .hero {
+            text-align: center;
+            padding: 110px 20px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent-cyan);
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: 3.6rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 620px;
+            margin: 0 auto 35px;
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(6, 182, 212, 0.45);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        /* Glass Cards Grid */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .glass-card {
+            background: var(--glass-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .glass-card:hover {
+            background: var(--glass-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-badge {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.12);
+            color: var(--accent-cyan);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 18px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .course-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .enroll-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* $500 Special Offer Banner */
+        .offer-box {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 45px 30px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .offer-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .offer-box p {
+            color: var(--text-muted);
+            max-width: 550px;
+            margin: 0 auto 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="liquid-orb-1"></div>
+    <div class="liquid-orb-2"></div>
+
+    <header>
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <span>Aura Academy</span>
+        </div>
+        <a href="#offer" class="cta-btn">View $500 Offer</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-pill">✨ Apple Liquid-Glass Architecture</div>
+        <h1>Master Next-Gen Skills with <span>Liquid Design</span></h1>
+        <p>A immersive online course platform with fluid glassmorphism, instant video streaming, student progress tracking, and automated course checkout.</p>
+        <div class="hero-actions">
+            <a href="#courses" class="btn-primary">Explore Course Modules</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title" id="courses">Featured Course Library</div>
+        <div class="section-sub">Interactive modules designed for high conversion and seamless student learning</div>
+
+        <div class="courses-grid">
+            <div class="glass-card">
+                <div>
+                    <span class="card-badge">Module 01 • Masterclass</span>
+                    <div class="card-title">Full-Stack Digital Mastery</div>
+                    <p class="card-desc">Comprehensive step-by-step video curriculum with downloadable resources, quizzes, and live Q&A modules.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="course-price">$149.00</span>
+                    <a href="#" class="enroll-link">Preview Module →</a>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div>
+                    <span class="card-badge" style="color: var(--accent-violet); background: rgba(139, 92, 246, 0.12);">Module 02 • Intensive</span>
+                    <div class="card-title">UI/UX & Liquid Design Systems</div>
+                    <p class="card-desc">Learn how to build Apple-grade glassmorphism interfaces, smooth animations, and ultra-responsive layouts.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="course-price">$199.00</span>
+                    <a href="#" class="enroll-link" style="color: var(--accent-violet);">Preview Module →</a>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <div>
+                    <span class="card-badge" style="color: var(--accent-pink); background: rgba(236, 72, 153, 0.12);">Module 03 • Accelerator</span>
+                    <div class="card-title">Monetization & Online Growth</div>
+                    <p class="card-desc">Scale your course sales, set up automated email marketing funnels, and connect secure payment portals.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="course-price">$249.00</span>
+                    <a href="#" class="enroll-link" style="color: var(--accent-pink);">Preview Module →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer-box" id="offer">
+            <h3>Ready to Launch Your Course Platform?</h3>
+            <p>I can build and deliver this complete, fully functional course platform for an exclusive flat fee of <strong>$500</strong> (down from your $750 budget).</p>
+            <a href="https://wa.me/?text=Hi%20Brender!%20I%20saw%20the%20$500%20course%20platform%20demo%20and%20I'd%20like%20to%20work%20together." class="btn-primary">Claim $500 Deal</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Online Course Ecosystem. Concept Demo Designed for Brender.</p>
+    </footer>
+
+</body>
+</html>
