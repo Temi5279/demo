@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Head Spa | Luxury Japanese Scalp Therapy Birmingham</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #fcfbfa;
+            --card-bg: #ffffff;
+            --accent-gold: #c5a059;
+            --accent-sage: #7a8b7b;
+            --text-dark: #1c211e;
+            --text-muted: #6b7260;
+            --border: #ece8e1;
+            --shadow-soft: 0 10px 30px rgba(197, 160, 89, 0.08);
+            --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Navigation */
+        header {
+            background: rgba(252, 251, 250, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        .book-nav-btn {
+            background: linear-gradient(135deg, var(--accent-gold), #b38b43);
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .book-nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 90px 20px 70px;
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--accent-gold);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.4rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            line-height: 1.2;
+            font-style: italic;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .section-heading p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(197, 160, 89, 0.4);
+        }
+
+        .service-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .service-meta {
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .select-btn {
+            background: transparent;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .select-btn:hover {
+            background: var(--accent-gold);
+            color: #ffffff;
+        }
+
+        /* Booking Form */
+        .booking-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 45px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 70px;
+        }
+
+        .booking-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            background: #faf8f5;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background: #ffffff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--accent-gold), #b38b43);
+            color: #ffffff;
+            border: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.95;
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.3);
+        }
+
+        /* Connect / Socials Section */
+        .connect-section {
+            text-align: center;
+            background: rgba(122, 139, 123, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 45px 25px;
+            margin-bottom: 30px;
+        }
+
+        .connect-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.1rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .connect-section p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 12px 22px;
+            border-radius: 30px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .social-card:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .social-icon {
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.3rem; }
+            .booking-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="brand-logo">KK Head Spa</div>
+        <a href="#booking" class="book-nav-btn">Reserve Spa Visit</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="hero-tag">Birmingham | Luxury Japanese Scalp Spa</span>
+        <h1>Helping women slow down in a world that never stops 🤎</h1>
+        <p>Step into an oasis of tranquility. Experience traditional Japanese head spa therapies, deep botanical scalp cleansing, and sensory relaxation designed to restore harmony.</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Treatments Menu -->
+        <div class="section-heading">
+            <h2>Signature Spa Rituals</h2>
+            <p>Select a treatment to request your appointment</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <div class="service-title">Signature Japanese Head Spa</div>
+                    <div class="service-meta">60 Mins • £75</div>
+                    <p class="service-desc">Micro-scalp camera diagnosis, deep follicle detoxification, organic botanical essential oil massage, and comforting water ring rinse.</p>
+                </div>
+                <button class="select-btn" onclick="selectService('Signature Japanese Head Spa (60 Mins)')">Select Ritual</button>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-title">Ultimate Holistic Scalp & Facial</div>
+                    <div class="service-meta">90 Mins • £110</div>
+                    <p class="service-desc">Full Japanese scalp therapy combined with a hydrating mini-facial, acupressure neck and shoulder massage, and halo shower therapy.</p>
+                </div>
+                <button class="select-btn" onclick="selectService('Ultimate Holistic Scalp & Facial (90 Mins)')">Select Ritual</button>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <div class="service-title">Express Scalp Detox & Renewal</div>
+                    <div class="service-meta">45 Mins • £55</div>
+                    <p class="service-desc">Targeted scalp exfoliation designed to remove product buildup, balance natural oils, and stimulate healthy circulation.</p>
+                </div>
+                <button class="select-btn" onclick="selectService('Express Scalp Detox & Renewal (45 Mins)')">Select Ritual</button>
+            </div>
+        </div>
+
+        <!-- Booking Section -->
+        <div class="booking-box" id="booking">
+            <h3>Request Spa Reservation</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">Choose your desired treatment and date. Our concierge will confirm availability.</p>
+            
+            <div class="form-group">
+                <label>Selected Treatment</label>
+                <input type="text" id="selected-service" class="form-control" value="Signature Japanese Head Spa (60 Mins)" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Date & Time</label>
+                <input type="datetime-local" class="form-control" id="booking-time">
+            </div>
+
+            <div class="form-group">
+                <label>Client Name & Contact Number</label>
+                <input type="text" class="form-control" id="client-info" placeholder="e.g. Sarah Jenkins - 07123 456789">
+            </div>
+
+            <button class="submit-btn" onclick="sendBooking()">Confirm Appointment Request 🌿</button>
+        </div>
+
+        <!-- Connect & Social Media Links -->
+        <div class="connect-section">
+            <h3>Connect & Follow Our Journey</h3>
+            <p>Follow KK Head Spa across our social channels for scalp care tips, behind-the-scenes content, and client transformations.</p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/kkhead_spa" target="_blank" class="social-card">
+                    <span class="social-icon">📷</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://tiktok.com/@kkheadspa" target="_blank" class="social-card">
+                    <span class="social-icon">🎵</span>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://facebook.com/share/18fEV6dQL2/" target="_blank" class="social-card">
+                    <span class="social-icon">📘</span>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://linktr.ee/kkheadspa" target="_blank" class="social-card">
+                    <span class="social-icon">🔗</span>
+                    <span>Linktree Hub</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 KK Head Spa Birmingham. All Rights Reserved. | Concept Demo Designed by Temiloluwa.</p>
+    </footer>
+
+    <script>
+        function selectService(name) {
+            document.getElementById('selected-service').value = name;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendBooking() {
+            const service = document.getElementById('selected-service').value;
+            const time = document.getElementById('booking-time').value;
+            const info = document.getElementById('client-info').value;
+
+            if (!info) {
+                alert("Please provide your name and phone number!");
+                return;
+            }
+
+            let msg = `Hello KK Head Spa! I would like to reserve an appointment:%0A%0A- *Treatment:* ${service}%0A- *Preferred Time:* ${time || 'Flexible'}%0A- *Client Details:* ${info}`;
+            window.open(`https://wa.me/?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
